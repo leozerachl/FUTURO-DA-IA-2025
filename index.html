@@ -5,57 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Quiz sobre Inteligência Artificial</title>
   <link rel="stylesheet" href="style.css" />
+  
 </head>
 <body>
-  <div class="container">
-    <h1>Quiz sobre Inteligência Artificial</h1>
-
-    <form id="quiz-form">
-      <div class="question">
-        <p>1. O que é Inteligência Artificial?</p>
-        <label><input type="radio" name="q1" value="a"> Uma nova rede social</label><br>
-        <label><input type="radio" name="q1" value="b"> Um tipo de inteligência biológica</label><br>
-        <label><input type="radio" name="q1" value="c"> Simulação da inteligência humana por máquinas</label>
-      </div>
-
-      <div class="question">
-        <p>2. Qual destas é uma aplicação comum da IA?</p>
-        <label><input type="radio" name="q2" value="a"> Pintura a óleo</label><br>
-        <label><input type="radio" name="q2" value="b"> Diagnóstico médico automatizado</label><br>
-        <label><input type="radio" name="q2" value="c"> Agricultura tradicional</label>
-      </div>
-
-      <div class="question">
-        <p>3. Qual é o nome do tipo de IA que aprende com dados?</p>
-        <label><input type="radio" name="q3" value="a"> Machine Learning</label><br>
-        <label><input type="radio" name="q3" value="b"> Robótica</label><br>
-        <label><input type="radio" name="q3" value="c"> Impressão 3D</label>
-      </div>
-
-      <button type="button" onclick="verificarRespostas()">Enviar Respostas</button>
-    </form>
-
-    <div id="resultado"></div>
-  </div>
-
-  <script>
-    function verificarRespostas() {
-      const respostasCorretas = {
-        q1: 'c',
-        q2: 'b',
-        q3: 'a'
-      };
-
-      let acertos = 0;
-      for (let pergunta in respostasCorretas) {
-        const respostaSelecionada = document.querySelector(input[name="${pergunta}"]:checked);
-        if (respostaSelecionada && respostaSelecionada.value === respostasCorretas[pergunta]) {
-          acertos++;
-        }
-      }
-
-      document.getElementById('resultado').innerText = Você acertou ${acertos} de 3 perguntas!;
-    }
-  </script>
+  <div class="caixa-principal">
+  <h1>voçẽ decide o futuro da IA</h1>
+  </div class="caixa-perguntas"></div>
+  <div class="caixa-alternativas"></div>
+  <div class="caixa-resultado"></div>
+    <p class="texto-resultado"></p>
+</div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
