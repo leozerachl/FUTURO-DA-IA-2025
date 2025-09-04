@@ -4,22 +4,64 @@ const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultados");
 const textoResultado = document.querySelector(".texto-resultado");
 
-const perguntas = [
+const pergunta = [
     {
-        enunciado:
-        "O que é inteligencia Artificial
-        alternativas:["Simulação da inteligência humana por máquinas","Um tipo de inteligência biológica"],
-    }
-    {
-        enunciado:
-        " Qual destas é uma aplicação comum da IA?
-        anternativas:["Diagnóstico médico automatizado","Pintura a óleo"],
+        anunciado: A IA subistituirá completamente alguns trabalhos humanos.
+        alternativas: [
+            "sim"
+            "não"
+        ]
+
+    },
+     {
+        anunciado: A IA será acessivel a todas as pessoas no futuro?
+
+        alternativas: [
+            "sim"
+            "não"
+        ]
+
     },
     {
-     enunciado:
-     " O que é um chatbot
-     alternativas:["Um sistema que simula conversas com humanos"," Um programa que desenha","Um tipo de vírus de computador"],
-     }
-     {
-    enunciado:Qual empresa criou o ChatGPT
-    alternativas:["OpenAI","Google","Google"],
+        anunciado: A IA terá consciencia própria?
+        alternativas: [
+            "sim"
+            "não"
+        ]
+
+    },
+    {
+        anunciado: A iA pode representar um risco á privacidade das pessoas?
+        alternativas: [
+            "sim"
+            "não"
+        ]
+
+    },
+    {
+        anunciado: A IA vai substituir a maioria dos empregos humanos ?
+        alternativas: [
+            "sim"
+            "não"
+        ]
+
+    },
+]
+       let atual =0;
+       let perguntaAtual;
+
+       function mostraPergunta() {
+        perguntaAtual = perguntas[atual];
+        caixaPerguntas.textContent = perguntaAtual.enunciado;
+        mostraAlternativas();
+
+       }
+        fuction mostraAlternativas() {
+            for (const alternativas of perguntaAtual.alternativas) {
+                const botaoAlternativas = document.createElement("button");
+                botaoAlternativas.textContent = alternativas
+                caixaAlternativas.appendChild(botaoAlternativas);
+            }
+        }
+
+        mostraPergunta
